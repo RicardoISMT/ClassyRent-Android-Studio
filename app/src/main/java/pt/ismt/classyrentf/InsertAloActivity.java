@@ -6,9 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class InsertAloActivity extends AppCompatActivity {
 
@@ -41,27 +39,30 @@ public class InsertAloActivity extends AppCompatActivity {
     public void inserirAlo(View v) {
         //validação das caixas de texto
         if (etAlo.getText().toString().length() == 0) {
-            etAlo.setError("É necessário preencher o nome!");
+            etAlo.setError("É necessário preencher o alojamento!");
             etAlo.requestFocus();
         } else if (etCid.getText().toString().length() == 0) {
-            etCid.setError("É necessário preencher o email!");
+            etCid.setError("É necessário preencher a cidade!");
             etCid.requestFocus();
         } else if (etUni.getText().toString().length() == 0) {
-            etUni.setError("É necessário preencher a palavra-passe!");
+            etUni.setError("É necessário preencher a universidade/instituto!");
             etUni.requestFocus();
         } else if (etDis.getText().toString().length() == 0) {
-            etDis.setError("É necessário preencher o email!");
+            etDis.setError("É necessário preencher a distância!");
             etDis.requestFocus();
         } else if (etPre.getText().toString().length() == 0) {
-            etPre.setError("É necessário preencher a palavra-passe!");
+            etPre.setError("É necessário preencher o preço!");
             etPre.requestFocus();
         } else if (etMai.getText().toString().length() == 0) {
             etMai.setError("É necessário preencher o email!");
             etMai.requestFocus();
         } else if (etDes.getText().toString().length() == 0) {
-            etDes.setError("É necessário preencher a palavra-passe!");
+            etDes.setError("É necessário preencher a descrição!");
             etDes.requestFocus();
-        } else {
+        } else if (etUi.getText().toString().length() == 0) {
+            etUi.setError("É necessário preencher o ID do utilizador!");
+            etUi.requestFocus();
+        }   else {
             //dados a enviar para a API (formato BODY)
             String dados = "alojamento=" + etAlo.getText() + "&cidade=" + etCid.getText() + "&uni=" + etUni.getText() + "&distancia=" + etDis.getText() + "&preco=" + etPre.getText() + "&mail=" + etMai.getText() + "&descricao=" + etDes.getText();
 
@@ -78,25 +79,25 @@ public class InsertAloActivity extends AppCompatActivity {
     public void updateAlo(View v) {
         //validação das caixas de texto
         if (etAlo.getText().toString().length() == 0) {
-            etAlo.setError("É necessário preencher o nome!");
+            etAlo.setError("É necessário preencher o alojamento!");
             etAlo.requestFocus();
         } else if (etCid.getText().toString().length() == 0) {
-            etCid.setError("É necessário preencher o email!");
+            etCid.setError("É necessário preencher a cidade!");
             etCid.requestFocus();
         } else if (etUni.getText().toString().length() == 0) {
-            etUni.setError("É necessário preencher a palavra-passe!");
+            etUni.setError("É necessário preencher a universidade/instituto!");
             etUni.requestFocus();
         } else if (etDis.getText().toString().length() == 0) {
-            etDis.setError("É necessário preencher o email!");
+            etDis.setError("É necessário preencher a descrição!");
             etDis.requestFocus();
         } else if (etPre.getText().toString().length() == 0) {
-            etPre.setError("É necessário preencher a palavra-passe!");
+            etPre.setError("É necessário preencher o preço!");
             etPre.requestFocus();
         } else if (etMai.getText().toString().length() == 0) {
             etMai.setError("É necessário preencher o email!");
             etMai.requestFocus();
         } else if (etDes.getText().toString().length() == 0) {
-            etDes.setError("É necessário preencher a palavra-passe!");
+            etDes.setError("É necessário preencher a descrição!");
             etDes.requestFocus();
         } else {
             //dados a enviar para a API (formato BODY)

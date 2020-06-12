@@ -57,13 +57,13 @@ public class ApiConnection extends AsyncTask<String, Void, Void> {
                 String data = urls[2];
                 Log.d("http", "Os dados enviados no body do pedido foram: " + data);
 
-                byte[] dados = data.getBytes(StandardCharsets.UTF_8);
+                //byte[] dados = data.getBytes(StandardCharsets.UTF_8);
 
                 _conexao.setDoOutput(true);
                 _conexao.setRequestMethod("GET");
                 _conexao.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-                _conexao.setRequestProperty("charset", "utf-8");
-                _conexao.setRequestProperty("Content-Length", Integer.toString(dados.length));
+                //_conexao.setRequestProperty("charset", "utf-8");
+                //_conexao.setRequestProperty("Content-Length", Integer.toString(dados.length));
 
             } else if (urls[1] == "1") { //POST
                 String data = urls[2];
@@ -79,8 +79,12 @@ public class ApiConnection extends AsyncTask<String, Void, Void> {
                 try (DataOutputStream wr = new DataOutputStream(_conexao.getOutputStream())) {
                     wr.write(dados);
                 }
+
             } else if (urls[1] == "2") { //DELETE
                 _conexao.setRequestMethod("DELETE");
+
+            } else if (urls[1] == "3") { //PUT
+                _conexao.setRequestMethod("PUT"); //POST
             }
 
             _conexao.setReadTimeout(12000);
@@ -195,6 +199,10 @@ public class ApiConnection extends AsyncTask<String, Void, Void> {
         } else if (_activity.getClass().getSimpleName().equals("EntraActivity")) {
             EntraActivity ia = (EntraActivity) _activity;
             ia.successMessage();
+
+        } else if (_activity.getClass().getSimpleName().equals("Eliminarctivity")) {
+            EliminarActivity ia = (EliminarActivity) _activity;
+            ia.succesMessage();
         }
     }
 

@@ -42,7 +42,7 @@ public class EntraActivity extends AppCompatActivity {
             _api = new ApiConnection();
             _api._activity = EntraActivity.this;
             _api._listaUser = new ArrayList();
-            _api.execute("http://10.0.2.2:3001/entrar", "1", dadosE);
+            _api.execute("http://10.0.2.2:3001/entrar", "0", dadosE);
 
         }
     }
