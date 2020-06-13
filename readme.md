@@ -36,7 +36,7 @@ Ano Lectivo: 2019/2020
 
 <br>
 
-## Ferramentas utilizadas
+## Ferramentas 
 ```bash
 Android Studio 3.6.3
 ```
