@@ -32,7 +32,7 @@ Ensino Superior: Instituto Superior Miguel Torga
 ## Licenciatura [Multimédia](https://ismt.pt/ensino/oferta-educativa/licenciaturas/multimedia/)
 ```bash
 Unidade Curricular: Programação III
-Ano Curricular: 2º Semestre 3º Ano
+Ano Curricular: 6º Semestre 3º Ano
 Ano Lectivo: 2019/2020
 ```
 
