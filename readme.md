@@ -1,3 +1,5 @@
+![Logotipo do Instituto Superior Miguel Torga](https://s2.portugalio.com/u/is/mt/ismt-instituto-superior-miguel-torga-1380304377_big.jpg)
+
 ## Projeto Final UC Programação III do ISMT
 
 <br>
